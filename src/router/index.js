@@ -1,25 +1,35 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+/*eslint-disable*/
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+import { createRouter, createWebHistory } from 'vue-router'
+import MainPage from '../components/MainPage'
+import BakeryCategory from '../components/BakeryCategory'
+import BakeryInfo from '../components/BakeryInfo'
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+	history: createWebHistory(),
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		}
+		return { left: 0, top: 0 }
+	},
+	routes: [
+		{
+			path: '/',
+			name: 'main',
+			component: MainPage
+		},
+		{
+			path: '/:bakery',
+			name: 'bakery',
+			component: BakeryCategory
+		},
+		{
+			path: '/:bakery/:info',
+			name: 'info',
+			component: BakeryInfo
+		},
+	]
 })
 
 export default router

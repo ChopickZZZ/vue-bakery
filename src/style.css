@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	line-height: 1;
+	margin: 0;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+a, a:focus, a:visited{
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+input{
+	outline: none;
+	font-size: inherit;
+	border: none;
+}
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.6rem;
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: #333;
+	color: #fff;
+}
+
+#app{
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.container{
+	max-width: 1130px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container--small{
+	max-width: 900px;
+}
+
+.search::placeholder{
+	color: inherit;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+.ibg{
+	background-position: center; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.ibg img{
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 0; 
+	height: 0; 
+	opacity: 0; 
+	visibility: hidden;
+}
+
+.centered{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - 225px);
+}
+
+.empty {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #2f9c57;
+}
+
+@media (max-width: 480px){
+	.centered{
+		text-align: center;
+	}
+}
+	
