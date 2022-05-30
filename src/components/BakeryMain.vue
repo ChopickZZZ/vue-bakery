@@ -49,9 +49,9 @@ export default {
 .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+  grid-template-rows: auto;
   justify-content: center;
-  column-gap: 3%;
-  row-gap: 2%;
+  gap: 2%;
 }
 
 @media (max-width: 768px) {

@@ -30,7 +30,7 @@ export default {
   border-radius: 5px;
   overflow: hidden;
   transition: 0.4s ease;
-  min-height: 400px;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -42,7 +42,7 @@ export default {
 }
 
 .card__img {
-  height: 320px;
+  min-height: 320px;
   object-fit: cover;
   width: 100%;
 }
