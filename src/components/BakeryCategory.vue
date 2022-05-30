@@ -27,7 +27,6 @@
       <h3 class="empty" v-else>Нет результатов поиска</h3>
     </div>
   </div>
-  <bakery-footer></bakery-footer>
 </template>
 
 <script>
@@ -35,7 +34,6 @@
 import { cards } from "../assets/bakery";
 import { categories } from "../assets/bakery";
 import BakeryHeader from "./BakeryHeader.vue";
-import BakeryFooter from "./BakeryFooter.vue";
 export default {
   mounted() {
     this.recipes = categories[this.type];
@@ -59,13 +57,13 @@ export default {
       return this.cards.find((card) => card.type === this.type);
     },
   },
-  components: { BakeryHeader, BakeryFooter },
+  components: { BakeryHeader },
 };
 </script>
 
 <style scoped>
 .categories {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 5rem 0;
 }
 
 .main-title {

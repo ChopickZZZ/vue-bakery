@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .page {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 5rem 0;
 }
 
 .row {

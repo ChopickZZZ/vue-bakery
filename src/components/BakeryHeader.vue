@@ -9,7 +9,6 @@
         @close="modalClose"
       ></bakery-modal>
       <div class="header__inner header__inner-left">
-        <router-link class="header__logo" to="/">Пирожок</router-link>
         <div class="header__input">
           <input
             class="header__filter"
@@ -92,18 +91,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-}
-
-.header__logo {
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.header__logo:hover {
-  color: #2f9c57;
 }
 
 .header__input {
